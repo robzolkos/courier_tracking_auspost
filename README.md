@@ -2,6 +2,8 @@
 
 Gets tracking information for a Australia Post connote and return normalized json response.
 
+[![Build Status](https://travis-ci.org/robzolkos/courier_tracking_auspost.svg?branch=master)](https://travis-ci.org/robzolkos/courier_tracking_auspost)
+
 #### Usage
 
 ```javascript
