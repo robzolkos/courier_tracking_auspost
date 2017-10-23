@@ -48,6 +48,17 @@ function fetcher(api_key, connote, cb) {
         });
       }
 
+      if (
+        response_body.QueryTrackEventsResponse.TrackingResults[0].Consignment
+          .Articles[0].Events.length === 0
+      ) {
+        return cb({
+          connote: connote,
+          statusCode: 404,
+          message: "No scans found"
+        });
+      }
+
       if (response.statusCode === 200) {
         return cb(null, normalize(response_body));
       }
