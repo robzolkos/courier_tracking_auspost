@@ -60,9 +60,12 @@ function transform(res) {
   trackingInfo = uniqWith(trackingInfo, isEqual);
 
   if (trackingInfo.length > 0) {
-    const firstScan = trackingInfo[trackingInfo.length - 1];
-    pickedupAt = { date: firstScan.date, time: firstScan.time };
-    pickedUp = true;
+    trackingInfo.forEach(item => {
+      if (item.action.toLowerCase().indexOf("picked up") != -1) {
+        pickedupAt = { date: item.date, time: item.time };
+        pickedUp = true;
+      }
+    });
   }
 
   let st = parseStatus(trackingInfo[0]);
