@@ -59,6 +59,7 @@ function transform(res) {
 
   trackingInfo = uniqWith(trackingInfo, isEqual);
 
+  // sure fire way of detecting item has been picked up
   if (trackingInfo.length > 0) {
     trackingInfo.forEach(item => {
       if (item.action.toLowerCase().indexOf("picked up") != -1) {
@@ -66,6 +67,24 @@ function transform(res) {
         pickedUp = true;
       }
     });
+  }
+
+  // if there is 3 or more tracking events chances are it has been picked up
+  if (pickedUp === false) {
+    if (trackingInfo.length > 2) {
+      pickedupAt = { date: trackingInfo[2].date, time: trackingInfo[2].time };
+      pickedUp = true;
+    }
+  }
+
+  // if the first item has certain text then its also been picked up
+  if (pickedUp === false) {
+    if (trackingInfo.length == 1) {
+      if (trackingInfo[0].action === "With Australia Post for delivery today") {
+        pickedupAt = { date: trackingInfo[0].date, time: trackingInfo[0].time };
+        pickedUp = true;
+      }
+    }
   }
 
   let st = parseStatus(trackingInfo[0]);
