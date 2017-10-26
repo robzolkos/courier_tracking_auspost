@@ -72,7 +72,9 @@ function transform(res) {
   // if there is 3 or more tracking events chances are it has been picked up
   if (pickedUp === false) {
     if (trackingInfo.length > 2) {
-      pickedupAt = { date: trackingInfo[2].date, time: trackingInfo[2].time };
+      console.log(trackingInfo[0]);
+      const item = trackingInfo[trackingInfo.length - 3];
+      pickedupAt = { date: item.date, time: item.time };
       pickedUp = true;
     }
   }
