@@ -1,6 +1,6 @@
 {
   "name": "courier_tracking_auspost",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Courier tracking from provided connote for Australia Post",
   "main": "index.js",
   "author": "Rob Zolkos <rob@zolkos.com> (http://zolkos.com)",

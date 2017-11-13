@@ -65,6 +65,15 @@ function transform(res) {
       if (item.action.toLowerCase().indexOf("picked up") != -1) {
         pickedupAt = { date: item.date, time: item.time };
         pickedUp = true;
+      } else {
+        if (
+          item.action
+            .toLowerCase()
+            .indexOf("processed through australia post facility") != -1
+        ) {
+          pickedupAt = { date: item.date, time: item.time };
+          pickedUp = true;
+        }
       }
     });
   }
