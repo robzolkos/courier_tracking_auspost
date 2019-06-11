@@ -1,6 +1,6 @@
 {
   "name": "courier_tracking_auspost",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Courier tracking from provided connote for Australia Post",
   "main": "index.js",
   "author": "Rob Zolkos <rob@zolkos.com> (http://zolkos.com)",
@@ -16,7 +16,7 @@
     "url": "https://github.com/robzolkos/courier_tracking_auspost.git"
   },
   "dependencies": {
-    "courier_finder": "^0.0.3",
+    "courier_finder": "^0.0.8",
     "lodash.isequal": "^4.5.0",
     "lodash.uniqwith": "^4.5.0",
     "moment": "^2.22.2",

@@ -622,10 +622,10 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-courier_finder@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/courier_finder/-/courier_finder-0.0.3.tgz#769ba1ded271019de3b31483573ade81b4df0810"
-  integrity sha512-inEVoZuK4JLNiQn5wZFAKdezQ31BaBrqD8t/lDxiRQ+wBE7DG8y8BXAv5JPbMgFTnaOkfgOj88sy7TFzAJGqqw==
+courier_finder@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/courier_finder/-/courier_finder-0.0.8.tgz#3f453e64b71e84518e582e8c09ee55ab5dc8e6a9"
+  integrity sha512-VAUTdzJIBdJKrRLo8rsEEtYcRQIC5GFMas/wmse6V6rcnoSwF+T2phrOjwObd2Z1oIkq6Q9b5ukq95mtmHN3+g==
 
 cross-spawn@^5.0.1:
   version "5.1.0"
